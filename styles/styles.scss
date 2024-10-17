@@ -1,14 +1,26 @@
 $ff-base: 'Montserrat', sans-serif;
 $fw-regular: 400;
 $fw-bold: 700;
-$fs-base: 20px;
-$fs-header: 30px;
+$fs-base: 14px;
+$fs-header: 22px;
 $color-text: #595959;
 $color-primary: #0056B8;
 $color-secondary: #F6A067;
+$color-white: #FFFFFF;
 $color-cross-1: #3FB3EE;
 $color-cross-2: #FAB283;
-$color-cross-2: #79CC96;
+$color-cross-3: #79CC96;
+$padding-XS: 8px;
+$padding-S: 16px;
+$padding-M: 20px;
+$padding-L: 32px;
+$padding-XL: 40px;
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
 
 #es-rc #es-rc-content {
     font-family: $ff-base;
@@ -20,11 +32,11 @@ $color-cross-2: #79CC96;
     padding: 0;
     overflow: hidden;
     color: $color-text;
-    background: #fff;
+    background: $color-white;
 
     ::selection {
-        background-color: $color-main;
-        color: #FFF;
+        background-color: $color-cross-2;
+        color: $color-white;
     }
 
     * {
@@ -39,5 +51,142 @@ $color-cross-2: #79CC96;
         max-width: 100%;
         display: block;
         margin: 0 auto;
+    }
+
+    .es-header {
+        font-size: $fs-header;
+        font-weight: $fw-regular;
+    }
+
+    .es-header--bold {
+        font-size: $fs-header;
+        font-weight: $fw-bold;
+    }
+
+    .es-kv {
+        &__left {
+            text-align: center;
+            margin-block: 2em;
+        }
+
+        &__right img {
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        &__logo {
+            padding: $padding-S;
+            max-width: 150px;
+            margin: auto;
+        }
+
+        &__title {
+            background-color: $color-secondary;
+            color: $color-white;
+            padding: $padding-S;
+        }
+
+        &__text {
+            padding: $padding-L $padding-S;
+        }
+
+        &__info {
+            margin: $padding-S auto;
+            background-color: $color-primary;
+            color: $color-white;
+            text-align: center;
+            padding: 1em 3em;
+            border-radius: 12px 0;
+            font-weight: $fw-bold;
+            max-width: max-content;
+        }
+
+        &__packshot {
+            padding: $padding-L $padding-S;
+            max-width: 80%;
+            margin: auto;
+        }
+    }
+
+    .es-features {
+        &__wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: $padding-XS;
+            padding: $padding-S;
+            display: flex;
+            flex-direction: column;
+            padding: 16px;
+            gap: 8px;
+        }
+
+        &__single {
+            display: flex;
+            align-items: center;
+            gap: $padding-S;
+        }
+
+        &__icon {
+            max-width: 50px;
+        }
+
+        &__text {
+            width: 100%;
+        }
+
+        &__wrapper {
+            background-color: red;
+        }
+    }
+
+    @media (min-width: 720px) {
+        .es-kv {
+            display: flex;
+            position: relative;
+        }
+
+        .es-kv__left,
+        .es-kv__right {
+            width: 50%;
+        }
+
+        .es-kv__packshot {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            width: 18%;
+            max-width: 170px;
+        }
+
+        .es-kv__left {
+            text-align: left;
+        }
+
+        .es-kv__right img {
+            height: 100%;
+            object-position: right;
+        }
+
+        .es-kv__logo {
+            margin: $padding-XL $padding-L;
+            padding: unset;
+            max-width: 120px;
+        }
+
+        .es-kv__title {
+            padding: $padding-S $padding-L;
+        }
+
+        .es-kv__text {
+            padding: $padding-L;
+            max-width: 360px;
+        }
+
+        .es-kv__info {
+            padding: 1em;
+            margin-inline: $padding-L;
+        }
     }
 }
