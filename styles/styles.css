@@ -245,6 +245,39 @@ body {
 #es-rc #es-rc-content .es-routine__desc {
   text-align: center;
 }
+#es-rc #es-rc-content .es-bubbles-2 {
+  transform: rotate(-180deg);
+}
+#es-rc #es-rc-content .es-cross__title {
+  text-align: center;
+}
+#es-rc #es-rc-content .es-cross__bg {
+  width: 200%;
+}
+#es-rc #es-rc-content .es-cross__bg img {
+  margin-left: -25%;
+}
+#es-rc #es-rc-content .es-cross__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 20px;
+}
+#es-rc #es-rc-content .es-cross__single {
+  color: #FFFFFF;
+  padding: 8px 32px;
+  border-radius: 0px 8px;
+  text-align: center;
+}
+#es-rc #es-rc-content .es-cross__single:nth-child(1) {
+  background-color: #3FB3EE;
+}
+#es-rc #es-rc-content .es-cross__single:nth-child(2) {
+  background-color: #FAB283;
+}
+#es-rc #es-rc-content .es-cross__single:nth-child(3) {
+  background-color: #79CC96;
+}
 @media (min-width: 576px) and (max-width: 719px) {
   #es-rc #es-rc-content .es-kv__packshot {
     display: none;
