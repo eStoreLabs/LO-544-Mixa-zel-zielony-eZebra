@@ -112,12 +112,12 @@ body {
     .es-features {
         position: relative;
         z-index: 0;
-        height: 300px;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: $padding-XL;
+        gap: $padding-L;
+        overflow: hidden;
 
         &__bg {
             position: absolute;
@@ -156,6 +156,53 @@ body {
 
         &__reference {
             font-size: 0.8em;
+            padding-bottom: $padding-L;
+        }
+    }
+
+    .es-formula {
+        .es-header {
+            text-align: center;
+            padding: $padding-XL $padding-M;
+        }
+
+        &__wrapper {
+            display: flex;
+            flex-direction: column;
+            padding: $padding-S;
+            gap: $padding-S;
+        }
+
+        &__single {
+            display: flex;
+            flex-direction: column;
+            gap: $padding-S;
+        }
+
+        &__bg {
+            background-color: $color-secondary;
+            width: 85%;
+            max-width: 300px;
+            text-align: center;
+            margin: auto;
+            color: $color-white;
+            text-transform: uppercase;
+            font-size: $fs-header;
+            padding-block: calc($padding-XS/2);
+        }
+
+        &__text {
+            text-align: center;
+        }
+
+        &__plus {
+            color: $color-secondary;
+            font-size: calc(2*$fs-header);
+            font-weight: $fw-bold;
+            text-align: center;
+        }
+        &__bubbles {
+            display: none;
         }
     }
 
@@ -184,8 +231,6 @@ body {
         .es-features__reference {
             padding-left: 70px;
         }
-
-
     }
 
     @media (min-width: 720px) {
@@ -241,5 +286,27 @@ body {
             font-size: $fs-header;
         }
 
+        .es-formula {
+            position: relative;
+            z-index: 0;
+        }
+
+        .es-formula__bubbles {
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: -1;
+        }
+
+        .es-formula__wrapper {
+            flex-direction: row;
+        }
+
+        .es-formula__single {
+            flex-basis: 50%;
+            display: grid;
+            align-content: flex-start;
+        }
     }
 }
