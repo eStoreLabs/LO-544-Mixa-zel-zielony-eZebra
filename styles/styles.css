@@ -128,6 +128,9 @@ body {
   font-size: 0.8em;
   padding-bottom: 32px;
 }
+#es-rc #es-rc-content .es-formula {
+  padding-block: 40px;
+}
 #es-rc #es-rc-content .es-formula .es-header {
   text-align: center;
   padding: 40px 20px;
@@ -165,6 +168,40 @@ body {
 }
 #es-rc #es-rc-content .es-formula__bubbles {
   display: none;
+}
+#es-rc #es-rc-content .es-ekspert__left img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+#es-rc #es-rc-content .es-ekspert__title {
+  text-align: center;
+  padding-block: 40px;
+}
+#es-rc #es-rc-content .es-ekspert__wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 32px;
+  padding: 16px;
+  max-width: 444px;
+  margin: auto;
+}
+#es-rc #es-rc-content .es-ekspert__single {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+}
+#es-rc #es-rc-content .es-ekspert__icon {
+  background-color: #0056B8;
+  padding: 8px;
+  border-radius: 8px;
+  width: 80px;
+  height: 80px;
+  display: grid;
+  place-items: center;
 }
 @media (min-width: 576px) and (max-width: 719px) {
   #es-rc #es-rc-content .es-kv__packshot {
@@ -250,5 +287,16 @@ body {
     flex-basis: 50%;
     display: grid;
     align-content: flex-start;
+  }
+  #es-rc #es-rc-content .es-ekspert {
+    display: flex;
+  }
+  #es-rc #es-rc-content .es-ekspert__left,
+  #es-rc #es-rc-content .es-ekspert__right {
+    width: 50%;
+  }
+  #es-rc #es-rc-content .es-ekspert__left img {
+    height: 100%;
+    position: right;
   }
 }/*# sourceMappingURL=styles.css.map */
