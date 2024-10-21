@@ -101,6 +101,11 @@ body {
             border-radius: 12px 0;
             font-weight: $fw-bold;
             max-width: max-content;
+            transition: all 200ms ease-in-out;
+        }
+
+        &__info:hover {
+            scale: 1.1;
         }
 
         &__packshot {
@@ -145,6 +150,11 @@ body {
             display: flex;
             align-items: center;
             gap: $padding-S;
+            transition: all 200ms ease-in-out;
+        }
+
+        &__single:hover {
+            margin-left: -$padding-XS;
         }
 
         &__icon {
@@ -211,6 +221,7 @@ body {
     }
 
     .es-ekspert {
+
         &__left img {
             object-fit: cover;
             width: 100%;
@@ -237,6 +248,13 @@ body {
             align-items: center;
             gap: $padding-S;
             text-align: center;
+            padding: $padding-M;
+            border-radius: $padding-M;
+            transition: all 200ms ease-in-out;
+        }
+
+        &__single:hover {
+            box-shadow: 1px 1px 15px 3px rgba(0, 0, 1, 0.1);
         }
 
         &__icon {
@@ -273,7 +291,8 @@ body {
             display: flex;
             flex-direction: column;
             gap: $padding-S;
-            padding: $padding-S;
+            padding: $padding-L $padding-S;
+            background-color: #e4e9eb;
         }
 
         &__single {
@@ -298,13 +317,17 @@ body {
         }
     }
 
-    .es-bubbles-2 {
-        transform: rotate(-180deg);
+    .es-bubbles-3 {
+        max-width: 500px;
+        margin: auto;
     }
 
+
     .es-cross {
+
         &__title {
             text-align: center;
+            padding: $padding-L;
         }
 
         &__bg {
@@ -318,8 +341,9 @@ body {
         &__wrapper {
             display: flex;
             flex-wrap: wrap;
-            gap: $padding-S;
-            padding: $padding-M;
+            gap: $padding-M;
+            padding: $padding-M $padding-L;
+            justify-content: center;
         }
 
         &__single {
@@ -327,6 +351,8 @@ body {
             padding: $padding-XS $padding-L;
             border-radius: 0px $padding-XS;
             text-align: center;
+            display: grid;
+            place-items: center;
         }
 
         &__single:nth-child(1) {
@@ -463,7 +489,7 @@ body {
             position: right;
         }
 
-        .es-bubbles {
+        .es-bubbles-2 {
             width: 65%;
             max-width: 540px;
             margin: auto;
@@ -494,6 +520,7 @@ body {
         .es-routine__wrapper {
             align-items: flex-end;
             width: 55%;
+            background-color: transparent;
         }
 
         .es-routine__single {
@@ -512,9 +539,37 @@ body {
         .es-routine__desc {
             font-size: 12px;
         }
+
+        .es-bubbles-3 {
+            display: none;
+        }
+
+        .es-cross__wrapper--top {
+            position: relative;
+        }
+
+        .es-cross__bg {
+            width: 100%;
+        }
+
+        .es-cross__bg img {
+            margin-left: unset;
+        }
+
+        .es-cross__title {
+            position: absolute;
+            max-width: 250px;
+            text-align: left;
+            top: 15%;
+        }
+
+        .es-cross__single {
+            max-width: 30%;
+        }
     }
 
     @media (min-width: 768px) {
+
         .es-bubbles {
             margin-top: -84px;
         }
