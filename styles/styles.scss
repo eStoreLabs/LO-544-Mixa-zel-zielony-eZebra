@@ -186,11 +186,21 @@ body {
     }
 
     .es-formula {
-        padding-block: $padding-XL;
+        position: relative;
+        z-index: 1;
+        margin-bottom: 50px;
 
         .es-header {
             text-align: center;
-            padding: $padding-XL $padding-M;
+            padding: $padding-S;
+            background-color: $color-secondary;
+            color: $color-white;
+        }
+
+        &__bg {
+            position: absolute;
+            width: 200%;
+            z-index: -1;
         }
 
         &__wrapper {
@@ -204,16 +214,19 @@ body {
             display: flex;
             flex-direction: column;
             gap: $padding-S;
+            background-color: #ffffff19;
+            padding: $padding-S;
+            border-radius: $padding-XS;
+            backdrop-filter: blur(4px);
         }
 
-        &__bg {
-            background-color: $color-secondary;
+        &__textTitle {
+            color: $color-secondary;
+            font-weight: $fw-bold;
             width: 85%;
             max-width: 300px;
             text-align: center;
             margin: auto;
-            color: $color-white;
-            text-transform: uppercase;
             font-size: $fs-header;
             padding-block: calc($padding-XS/2);
         }
@@ -331,11 +344,6 @@ body {
         }
     }
 
-    .es-bubbles-3 {
-        max-width: 500px;
-        margin: auto;
-    }
-
 
     .es-cross {
 
@@ -424,6 +432,26 @@ body {
             padding-left: 70px;
         }
 
+        .es-formula__bg {
+            width: 100%;
+        }
+
+        .es-formula .es-header {
+            max-width: max-content;
+            padding-inline: $padding-XXL;
+            border-radius: 0 0 $padding-XS 0;
+            margin: auto;
+        }
+
+        .es-formula__title {
+            padding-top: $padding-L;
+        }
+
+        .es-formula__single {
+            background-color: transparent;
+            backdrop-filter: unset;
+        }
+
         .es-routine__wrapper {
             flex-direction: row;
         }
@@ -489,22 +517,17 @@ body {
             z-index: 0;
         }
 
-        .es-formula__bubbles {
-            display: block;
-            position: absolute;
-            top: 0;
-            right: 0;
-            z-index: -1;
-        }
-
         .es-formula__wrapper {
             flex-direction: row;
+            padding: $padding-L;
+            justify-content: center;
         }
 
         .es-formula__single {
             flex-basis: 50%;
             display: grid;
             align-content: flex-start;
+            max-width: 360px;
         }
 
         .es-ekspert {
