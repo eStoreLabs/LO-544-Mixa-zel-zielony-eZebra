@@ -106,13 +106,21 @@ body {
   top: 0;
   left: 0;
   z-index: -1;
-  width: 200%;
+  height: 100%;
 }
 #es-rc #es-rc-content .es-features__bg img {
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: left;
      object-position: left;
+  height: 100%;
+}
+#es-rc #es-rc-content .es-features__title {
+  background-color: #FAB283;
+  color: #FFFFFF;
+  padding: 16px;
+  text-align: center;
+  width: 100%;
 }
 #es-rc #es-rc-content .es-features__wrapper {
   display: flex;
@@ -309,16 +317,31 @@ body {
 }
 @media (min-width: 576px) {
   #es-rc #es-rc-content .es-features {
-    aspect-ratio: 1300/530;
-    height: unset;
     align-items: flex-start;
     gap: unset;
+    min-height: 300px;
   }
   #es-rc #es-rc-content .es-features__bg {
     width: 100%;
+    height: 100%;
+  }
+  #es-rc #es-rc-content .es-features__bg img {
+    -o-object-position: center;
+       object-position: center;
+    height: 100%;
+    width: 100%;
+  }
+  #es-rc #es-rc-content .es-features__title {
+    width: 65%;
+    margin-top: 32px;
+    padding: 8px;
+    border-radius: 0 0 8px 0;
+    max-width: 550px;
   }
   #es-rc #es-rc-content .es-features__wrapper {
-    padding: 32px;
+    padding: 32px 0px 32px 32px;
+    width: 65%;
+    max-width: 550px;
   }
   #es-rc #es-rc-content .es-features__reference {
     padding-left: 70px;
@@ -366,8 +389,11 @@ body {
   #es-rc #es-rc-content .es-kv__text {
     max-width: 360px;
   }
+  #es-rc #es-rc-content .es-features {
+    aspect-ratio: 1300/532;
+  }
   #es-rc #es-rc-content .es-features__text {
-    font-size: 22px;
+    font-size: 1.3em;
   }
   #es-rc #es-rc-content .es-formula {
     position: relative;
