@@ -5,11 +5,12 @@ $fs-base: 14px;
 $fs-header: 22px;
 $color-text: #595959;
 $color-primary: #0056B8;
-$color-secondary: #F6A067;
+$color-primary--lighter: #3FB3EE;
+$color-secondary: #FAB283;
+$color-secondary--darker: #F6A067;
+$color-accent: #79CC96;
 $color-white: #FFFFFF;
-$color-cross-1: #3FB3EE;
-$color-cross-2: #FAB283;
-$color-cross-3: #79CC96;
+
 $padding-XS: 8px;
 $padding-S: 16px;
 $padding-M: 20px;
@@ -36,7 +37,7 @@ body {
     background: $color-white;
 
     ::selection {
-        background-color: $color-cross-2;
+        background-color: $color-secondary;
         color: $color-white;
     }
 
@@ -88,12 +89,16 @@ body {
             padding: $padding-S;
         }
 
-        &__text {
-            padding: $padding-L $padding-S;
+        &__textWrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: $padding-M;
+            padding: $padding-L;
         }
 
         &__info {
-            margin: $padding-S auto;
             background-color: $color-primary;
             color: $color-white;
             text-align: center;
@@ -356,15 +361,15 @@ body {
         }
 
         &__single:nth-child(1) {
-            background-color: $color-cross-1;
+            background-color: $color-primary--lighter;
         }
 
         &__single:nth-child(2) {
-            background-color: $color-cross-2;
+            background-color: $color-secondary;
         }
 
         &__single:nth-child(3) {
-            background-color: $color-cross-3;
+            background-color: $color-accent;
         }
     }
 
@@ -438,14 +443,12 @@ body {
             padding: $padding-S $padding-L;
         }
 
-        .es-kv__text {
-            padding: $padding-L;
-            max-width: 360px;
+        .es-kv__textWrapper {
+            align-items: flex-start;
         }
 
-        .es-kv__info {
-            padding: 1em;
-            margin-inline: $padding-L;
+        .es-kv__text {
+            max-width: 360px;
         }
 
         .es-features__text {
