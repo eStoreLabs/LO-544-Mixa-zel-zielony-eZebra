@@ -188,7 +188,7 @@ body {
     .es-formula {
         position: relative;
         z-index: 1;
-        margin-bottom: 50px;
+        margin-bottom: $padding-L;
 
         .es-header {
             text-align: center;
@@ -241,9 +241,135 @@ body {
             font-weight: $fw-bold;
             text-align: center;
         }
+    }
 
-        &__bubbles {
-            display: none;
+    .es-cross {
+        position: relative;
+        z-index: 0;
+
+        &__bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            height: 100%;
+            width: 100%;
+        }
+
+        &__bg img {
+            height: 100%;
+            width: 100%;
+        }
+
+        &__left {
+            display: flex;
+            flex-direction: column;
+            padding: $padding-XL $padding-L;
+            gap: $padding-M;
+        }
+
+        &__odkryj {
+            background-color: $color-primary;
+            color: $color-white;
+            font-size: $fs-header;
+            text-align: center;
+            padding: $padding-XS $padding-L;
+            font-weight: $fw-bold;
+            border-radius: 0 $padding-XS;
+            width: max-content;
+        }
+
+        .es-header {
+            color: $color-secondary;
+        }
+
+        .es-header--bold {
+            display: block;
+        }
+
+        &__wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: $padding-S;
+            padding: $padding-L $padding-S;
+        }
+
+        &__single {
+            display: flex;
+            flex-direction: column;
+            gap: $padding-XS;
+            align-items: center;
+            backdrop-filter: blur(4px);
+            padding: $padding-XS;
+            border-radius: $padding-XS;
+            text-decoration: none;
+            width: 50%;
+        }
+
+        &__single:hover {
+            background-color: rgba(255, 255, 255, 0.0980392157);
+            box-shadow: 1px 1px 15px 3px rgba(0, 0, 1, 0.1);
+        }
+
+        &__name {
+            background-color: $color-secondary;
+            color: $color-white;
+            padding: $padding-XS $padding-M;
+            font-weight: $fw-bold;
+            text-align: center;
+            border-radius: 0 $padding-XS;
+            width: max-content;
+        }
+
+        &__desc {
+            text-align: center;
+            color: $color-text;
+        }
+    }
+
+    .es-products {
+
+        &__title {
+            text-align: center;
+            padding: $padding-L;
+        }
+
+        &__bg {
+            width: 200%;
+        }
+
+        &__bg img {
+            margin-left: -25%;
+        }
+
+        &__wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: $padding-M;
+            padding: $padding-M $padding-L;
+            justify-content: center;
+        }
+
+        &__single {
+            color: $color-white;
+            padding: $padding-XS $padding-L;
+            border-radius: 0px $padding-XS;
+            text-align: center;
+            display: grid;
+            place-items: center;
+        }
+
+        &__single:nth-child(1) {
+            background-color: $color-primary--lighter;
+        }
+
+        &__single:nth-child(2) {
+            background-color: $color-secondary;
+        }
+
+        &__single:nth-child(3) {
+            background-color: $color-accent;
         }
     }
 
@@ -292,101 +418,6 @@ body {
             height: 80px;
             display: grid;
             place-items: center;
-        }
-    }
-
-    .es-routine {
-        &__left {
-            display: flex;
-            flex-direction: column;
-            padding: $padding-XL $padding-L;
-            gap: $padding-M;
-        }
-
-        &__odkryj {
-            background-color: $color-primary;
-            color: $color-white;
-            font-size: $fs-header;
-            text-align: center;
-            padding: $padding-XS $padding-L;
-            font-weight: $fw-bold;
-            border-radius: 0 $padding-XS;
-            width: max-content;
-        }
-
-        &__wrapper {
-            display: flex;
-            flex-direction: column;
-            gap: $padding-S;
-            padding: $padding-L $padding-S;
-            background-color: #e4e9eb;
-        }
-
-        &__single {
-            display: flex;
-            flex-direction: column;
-            gap: $padding-XS;
-            align-items: center;
-        }
-
-        &__name {
-            background-color: $color-secondary;
-            color: $color-white;
-            padding: $padding-XS $padding-M;
-            font-weight: $fw-bold;
-            text-align: center;
-            border-radius: 0 $padding-XS;
-            width: max-content;
-        }
-
-        &__desc {
-            text-align: center;
-        }
-    }
-
-
-    .es-cross {
-
-        &__title {
-            text-align: center;
-            padding: $padding-L;
-        }
-
-        &__bg {
-            width: 200%;
-        }
-
-        &__bg img {
-            margin-left: -25%;
-        }
-
-        &__wrapper {
-            display: flex;
-            flex-wrap: wrap;
-            gap: $padding-M;
-            padding: $padding-M $padding-L;
-            justify-content: center;
-        }
-
-        &__single {
-            color: $color-white;
-            padding: $padding-XS $padding-L;
-            border-radius: 0px $padding-XS;
-            text-align: center;
-            display: grid;
-            place-items: center;
-        }
-
-        &__single:nth-child(1) {
-            background-color: $color-primary--lighter;
-        }
-
-        &__single:nth-child(2) {
-            background-color: $color-secondary;
-        }
-
-        &__single:nth-child(3) {
-            background-color: $color-accent;
         }
     }
 
@@ -452,8 +483,17 @@ body {
             backdrop-filter: unset;
         }
 
-        .es-routine__wrapper {
+        .es-cross__wrapper {
             flex-direction: row;
+            align-items: flex-end;
+        }
+
+        .es-cross__single {
+            width: 33%;
+        }
+
+        .es-cross__desc {
+            height: 4em;
         }
     }
 
@@ -530,6 +570,71 @@ body {
             max-width: 360px;
         }
 
+        .es-cross {
+            position: relative;
+            z-index: 0;
+            display: flex;
+        }
+
+        .es-cross__left {
+            justify-content: center;
+            width: 45%;
+            gap: $padding-L;
+        }
+
+        .es-cross__wrapper {
+            padding: 0 $padding-S;
+        }
+
+        .es-cross__single {
+            backdrop-filter: unset;
+            height: 100%;
+            justify-content: flex-end;
+            padding: $padding-XS 0;
+        }
+
+        .es-cross__single:hover {
+            background-color: unset;
+            box-shadow: unset;
+        }
+        
+        .es-cross__name {
+            font-size: 12px;
+            padding: 6px 12px;
+            width: unset;
+            height: 4em;
+            display: grid;
+            place-items: center;
+        }
+
+        .es-cross__desc {
+            font-size: 10px;
+            height: 3em;
+        }
+
+        .es-products__wrapper--top {
+            position: relative;
+        }
+
+        .es-products__bg {
+            width: 100%;
+        }
+
+        .es-products__bg img {
+            margin-left: unset;
+        }
+
+        .es-products__title {
+            position: absolute;
+            max-width: 250px;
+            text-align: left;
+            top: 15%;
+        }
+
+        .es-products__single {
+            max-width: 30%;
+        }
+
         .es-ekspert {
             display: flex;
         }
@@ -543,98 +648,11 @@ body {
             height: 100%;
             position: right;
         }
-
-        .es-bubbles-2 {
-            width: 65%;
-            max-width: 540px;
-            margin: auto;
-            margin-top: -75px;
-        }
-
-        .es-routine {
-            position: relative;
-            z-index: 0;
-            aspect-ratio: 1300 / 665;
-            display: flex;
-            background-color: #e7e7ef;
-        }
-
-        .es-routine__bg {
-            position: absolute;
-            top: 0;
-            right: 0;
-            z-index: -1;
-        }
-
-        .es-routine__left {
-            justify-content: flex-start;
-            width: 45%;
-            gap: $padding-L;
-        }
-
-        .es-routine__wrapper {
-            align-items: flex-end;
-            width: 55%;
-            background-color: transparent;
-        }
-
-        .es-routine__single {
-            width: 33%;
-            display: grid;
-            grid-template-rows: 50px 50px;
-            align-items: start;
-        }
-
-        .es-routine__name {
-            font-size: 14px;
-            padding: 6px 12px;
-            width: unset;
-        }
-
-        .es-routine__desc {
-            font-size: 12px;
-        }
-
-        .es-bubbles-3 {
-            display: none;
-        }
-
-        .es-cross__wrapper--top {
-            position: relative;
-        }
-
-        .es-cross__bg {
-            width: 100%;
-        }
-
-        .es-cross__bg img {
-            margin-left: unset;
-        }
-
-        .es-cross__title {
-            position: absolute;
-            max-width: 250px;
-            text-align: left;
-            top: 15%;
-        }
-
-        .es-cross__single {
-            max-width: 30%;
-        }
     }
 
-    @media (min-width: 768px) {
-
-        .es-bubbles {
-            margin-top: -84px;
-        }
-
-        .es-routine {
-            aspect-ratio: 1300 / 665;
-        }
-
-        .es-routine__left {
-            justify-content: center;
+    @media (min-width: 750px) {
+        .es-cross__name {
+            height: unset;
         }
     }
 
@@ -643,15 +661,15 @@ body {
             margin-top: -110px;
         }
 
-        .es-routine {
+        .es-cross {
             aspect-ratio: 1300 / 550;
         }
 
-        .es-routine__left {
+        .es-cross__left {
             padding-left: $padding-XXL;
         }
 
-        .es-routine__single {
+        .es-cross__single {
             grid-template-rows: 32px 37px;
         }
     }
