@@ -409,6 +409,23 @@ body {
   }
   #es-rc #es-rc-content .es-cross__single {
     width: 33%;
+    height: 100%;
+    -webkit-backdrop-filter: unset;
+            backdrop-filter: unset;
+  }
+  #es-rc #es-rc-content .es-cross__single img,
+  #es-rc #es-rc-content .es-cross__name {
+    transition: all 200ms ease-in-out;
+  }
+  #es-rc #es-rc-content .es-cross__single:hover {
+    background-color: unset;
+    box-shadow: unset;
+  }
+  #es-rc #es-rc-content .es-cross__single:hover img {
+    scale: 1.1;
+  }
+  #es-rc #es-rc-content .es-cross__single:hover .es-cross__name {
+    background-color: #0056B8;
   }
   #es-rc #es-rc-content .es-cross__desc {
     height: 4em;
@@ -493,10 +510,6 @@ body {
     height: 100%;
     justify-content: flex-end;
     padding: 8px 0;
-  }
-  #es-rc #es-rc-content .es-cross__single:hover {
-    background-color: unset;
-    box-shadow: unset;
   }
   #es-rc #es-rc-content .es-cross__name {
     font-size: 12px;

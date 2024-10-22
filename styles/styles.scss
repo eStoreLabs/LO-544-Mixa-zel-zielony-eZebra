@@ -490,6 +490,26 @@ body {
 
         .es-cross__single {
             width: 33%;
+            height: 100%;
+            backdrop-filter: unset;
+        }
+
+        .es-cross__single img,
+        .es-cross__name  {
+            transition: all 200ms ease-in-out;
+        }
+
+        .es-cross__single:hover {
+            background-color: unset;
+            box-shadow: unset;
+        }
+
+        .es-cross__single:hover img {
+            scale: 1.1;
+        }
+
+        .es-cross__single:hover .es-cross__name {
+            background-color: $color-primary;
         }
 
         .es-cross__desc {
@@ -593,11 +613,6 @@ body {
             padding: $padding-XS 0;
         }
 
-        .es-cross__single:hover {
-            background-color: unset;
-            box-shadow: unset;
-        }
-        
         .es-cross__name {
             font-size: 12px;
             padding: 6px 12px;
