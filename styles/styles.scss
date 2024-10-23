@@ -330,17 +330,26 @@ body {
 
     .es-products {
 
-        &__title {
+        .es-header {
             text-align: center;
             padding: $padding-L;
+            color: $color-primary;
+        }
+
+        .es-header--bold {
+            display: block;
+        }
+
+        &__title--desktop {
+            display: none;
         }
 
         &__bg {
-            width: 200%;
+            width: 100%;
         }
 
         &__bg img {
-            margin-left: -25%;
+            width: 100%;
         }
 
         &__wrapper {
@@ -358,6 +367,8 @@ body {
             text-align: center;
             display: grid;
             place-items: center;
+            width: 100%;
+            font-weight: $fw-bold;
         }
 
         &__single:nth-child(1) {
@@ -380,9 +391,12 @@ body {
             width: 100%;
         }
 
-        &__title {
-            text-align: center;
+        &__logo {
             padding-block: $padding-XL;
+        }
+
+        &__logo img {
+            max-width: 120px;
         }
 
         &__wrapper {
@@ -401,7 +415,7 @@ body {
             align-items: center;
             gap: $padding-S;
             text-align: center;
-            padding: $padding-M;
+            padding: $padding-S;
             border-radius: $padding-M;
             transition: all 200ms ease-in-out;
         }
@@ -495,7 +509,7 @@ body {
         }
 
         .es-cross__single img,
-        .es-cross__name  {
+        .es-cross__name {
             transition: all 200ms ease-in-out;
         }
 
@@ -514,6 +528,39 @@ body {
 
         .es-cross__desc {
             height: 4em;
+        }
+
+        .es-products__title--mobile {
+            display: none;
+        }
+
+        .es-products__title--desktop {
+            display: block;
+        }
+
+        .es-products {
+            display: flex;
+        }
+
+        .es-products__bg {
+            height: 100%;
+        }
+
+        .es-products__bg img {
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .es-products .es-header {
+            padding-inline: unset;
+        }
+
+        .es-products__wrapper {
+            padding-right: 0;
+        }
+
+        .es-products__single {
+            border-radius: 0 0 0 $padding-XS;
         }
     }
 
@@ -590,6 +637,11 @@ body {
             max-width: 360px;
         }
 
+        .es-formula__single:hover {
+            box-shadow: 1px 1px 15px 3px rgba(0, 0, 1, 0.1);
+
+        }
+
         .es-cross {
             position: relative;
             z-index: 0;
@@ -627,36 +679,23 @@ body {
             height: 3em;
         }
 
-        .es-products__wrapper--top {
-            position: relative;
+        .es-products__left {
+            width: 54%;
         }
 
-        .es-products__bg {
-            width: 100%;
-        }
-
-        .es-products__bg img {
-            margin-left: unset;
-        }
-
-        .es-products__title {
-            position: absolute;
-            max-width: 250px;
-            text-align: left;
-            top: 15%;
-        }
-
-        .es-products__single {
-            max-width: 30%;
+        .es-products__right {
+            width: 46%;
         }
 
         .es-ekspert {
             display: flex;
         }
 
-        .es-ekspert__left,
+        .es-ekspert__left {
+            width: 54%
+        }
         .es-ekspert__right {
-            width: 50%;
+            width: 46%;
         }
 
         .es-ekspert__left img {
@@ -677,7 +716,7 @@ body {
         }
 
         .es-cross {
-            aspect-ratio: 1300 / 550;
+            aspect-ratio: 1300 / 420;
         }
 
         .es-cross__left {
