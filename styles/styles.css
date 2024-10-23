@@ -17,11 +17,11 @@ body {
   background: #FFFFFF;
 }
 #es-rc #es-rc-content ::-moz-selection {
-  background-color: #FAB283;
+  background-color: #0056B8;
   color: #FFFFFF;
 }
 #es-rc #es-rc-content ::selection {
-  background-color: #FAB283;
+  background-color: #0056B8;
   color: #FFFFFF;
 }
 #es-rc #es-rc-content * {
@@ -593,7 +593,7 @@ body {
     margin-top: -110px;
   }
   #es-rc #es-rc-content .es-cross {
-    aspect-ratio: 1300/420;
+    aspect-ratio: 1300/540;
   }
   #es-rc #es-rc-content .es-cross__left {
     padding-left: 50px;

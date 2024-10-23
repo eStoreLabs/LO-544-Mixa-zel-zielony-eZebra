@@ -37,7 +37,7 @@ body {
     background: $color-white;
 
     ::selection {
-        background-color: $color-secondary;
+        background-color: $color-primary;
         color: $color-white;
     }
 
@@ -716,7 +716,7 @@ body {
         }
 
         .es-cross {
-            aspect-ratio: 1300 / 420;
+            aspect-ratio: 1300 / 540;
         }
 
         .es-cross__left {
