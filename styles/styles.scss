@@ -312,6 +312,30 @@ body {
             box-shadow: 1px 1px 15px 3px rgba(0, 0, 1, 0.1);
         }
 
+        &__img {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+
+        &__img img {
+            max-width: 100%;
+            height: 100%;
+        }
+
+        &__img--1 {
+            max-height: 285px;
+        }
+
+        &__img--2 {
+            max-height: 210px;
+        }
+
+        &__img--3 {
+            max-height: 240px;
+        }
+
         &__name {
             background-color: $color-secondary;
             color: $color-white;
@@ -721,10 +745,6 @@ body {
 
         .es-cross__left {
             padding-left: $padding-XXL;
-        }
-
-        .es-cross__single {
-            grid-template-rows: 32px 37px;
         }
     }
 }
