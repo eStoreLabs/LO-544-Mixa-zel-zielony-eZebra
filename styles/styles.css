@@ -524,13 +524,13 @@ body {
     align-items: flex-start;
   }
   #es-rc #es-rc-content .es-kv__text {
-    max-width: 360px;
+    max-width: 345px;
   }
   #es-rc #es-rc-content .es-features {
     aspect-ratio: 1300/532;
   }
   #es-rc #es-rc-content .es-features__text {
-    font-size: 1.3em;
+    font-size: 1.5em;
   }
   #es-rc #es-rc-content .es-formula {
     position: relative;
@@ -545,7 +545,7 @@ body {
     flex-basis: 50%;
     display: grid;
     align-content: flex-start;
-    max-width: 360px;
+    max-width: 375px;
   }
   #es-rc #es-rc-content .es-formula__single:hover {
     box-shadow: 1px 1px 15px 3px rgba(0, 0, 1, 0.1);
@@ -557,11 +557,12 @@ body {
   }
   #es-rc #es-rc-content .es-cross__left {
     justify-content: center;
-    width: 45%;
+    width: 40%;
     gap: 32px;
   }
   #es-rc #es-rc-content .es-cross__wrapper {
     padding: 0 16px;
+    width: 60%;
   }
   #es-rc #es-rc-content .es-cross__single {
     -webkit-backdrop-filter: unset;
@@ -571,15 +572,15 @@ body {
     padding: 8px 0;
   }
   #es-rc #es-rc-content .es-cross__name {
-    font-size: 12px;
+    font-size: 14px;
     padding: 6px 12px;
-    width: unset;
+    width: 90%;
     height: 4em;
     display: grid;
     place-items: center;
   }
   #es-rc #es-rc-content .es-cross__desc {
-    font-size: 10px;
+    font-size: 11px;
     height: 3em;
   }
   #es-rc #es-rc-content .es-products__left {
