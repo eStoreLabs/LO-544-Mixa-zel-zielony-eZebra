@@ -60,7 +60,7 @@ body {
   margin: auto;
 }
 #es-rc #es-rc-content .es-kv__title {
-  background-color: #FAB283;
+  background-color: #79CC96;
   color: #FFFFFF;
   padding: 16px;
 }
@@ -116,7 +116,7 @@ body {
   height: 100%;
 }
 #es-rc #es-rc-content .es-features__title {
-  background-color: #FAB283;
+  background-color: #79CC96;
   color: #FFFFFF;
   padding: 16px;
   text-align: center;
@@ -156,7 +156,7 @@ body {
 #es-rc #es-rc-content .es-formula .es-header {
   text-align: center;
   padding: 16px;
-  background-color: #FAB283;
+  background-color: #79CC96;
   color: #FFFFFF;
 }
 #es-rc #es-rc-content .es-formula__bg {
@@ -181,7 +181,7 @@ body {
           backdrop-filter: blur(4px);
 }
 #es-rc #es-rc-content .es-formula__textTitle {
-  color: #FAB283;
+  color: #79CC96;
   font-weight: 700;
   width: 85%;
   max-width: 300px;
@@ -194,7 +194,7 @@ body {
   text-align: center;
 }
 #es-rc #es-rc-content .es-formula__plus {
-  color: #FAB283;
+  color: #79CC96;
   font-size: 44px;
   font-weight: 700;
   text-align: center;
@@ -233,7 +233,7 @@ body {
   width: max-content;
 }
 #es-rc #es-rc-content .es-cross .es-header {
-  color: #FAB283;
+  color: #79CC96;
 }
 #es-rc #es-rc-content .es-cross .es-header--bold {
   display: block;
@@ -281,7 +281,7 @@ body {
   max-height: 240px;
 }
 #es-rc #es-rc-content .es-cross__name {
-  background-color: #FAB283;
+  background-color: #79CC96;
   color: #FFFFFF;
   padding: 8px 20px;
   font-weight: 700;
@@ -422,7 +422,7 @@ body {
     max-width: -moz-max-content;
     max-width: max-content;
     padding-inline: 50px;
-    border-radius: 0 0 8px 0;
+    border-radius: 8px 0 8px 0;
     margin: auto;
   }
   #es-rc #es-rc-content .es-formula__title {
