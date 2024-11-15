@@ -261,6 +261,25 @@ body {
   background-color: rgba(255, 255, 255, 0.0980392157);
   box-shadow: 1px 1px 15px 3px rgba(0, 0, 1, 0.1);
 }
+#es-rc #es-rc-content .es-cross__img {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+#es-rc #es-rc-content .es-cross__img img {
+  max-width: 100%;
+  height: 100%;
+}
+#es-rc #es-rc-content .es-cross__img--1 {
+  max-height: 285px;
+}
+#es-rc #es-rc-content .es-cross__img--2 {
+  max-height: 210px;
+}
+#es-rc #es-rc-content .es-cross__img--3 {
+  max-height: 240px;
+}
 #es-rc #es-rc-content .es-cross__name {
   background-color: #FAB283;
   color: #FFFFFF;
@@ -597,8 +616,5 @@ body {
   }
   #es-rc #es-rc-content .es-cross__left {
     padding-left: 50px;
-  }
-  #es-rc #es-rc-content .es-cross__single {
-    grid-template-rows: 32px 37px;
   }
 }/*# sourceMappingURL=styles.css.map */
