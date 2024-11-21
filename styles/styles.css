@@ -384,6 +384,11 @@ body {
     display: none;
   }
 }
+@media (max-width: 719px) {
+  #es-rc #es-rc-content .es-kv__packshot img {
+    max-height: 300px;
+  }
+}
 @media (min-width: 576px) {
   #es-rc #es-rc-content .es-features {
     align-items: flex-start;
@@ -557,7 +562,7 @@ body {
   }
   #es-rc #es-rc-content .es-cross__left {
     justify-content: center;
-    width: 40%;
+    width: 42%;
     gap: 32px;
   }
   #es-rc #es-rc-content .es-cross__wrapper {

@@ -464,6 +464,12 @@ body {
         }
     }
 
+    @media (max-width: 719px) {
+        .es-kv__packshot img {
+            max-height: 300px;
+        }
+    }
+
     @media (min-width: 576px) {
         .es-features {
             align-items: flex-start;
